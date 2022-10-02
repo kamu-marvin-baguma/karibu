@@ -1,0 +1,47 @@
+extends ./layout
+block content  
+    .container
+    h2.list Produce Lists
+    h5 hello, #{username}
+    a.btn.btn-warning(href="/logout")
+       Branch:  
+    if produces.lenght 
+        table.table.table-dark.table-striped
+            thead.thead
+                tr
+                    th(scope='col') Produce Name
+                    th(scope='col') Name of Buyer
+                    th(scope='col') Name Of Dealer
+                    th(scope='col') Selling Price Of Produce
+                    th(scope='col') Cost of Produce(per kg)
+                    th(scope='col') Tonnage(1000kgs)
+                    th(scope='col') Date
+                    th(scope='col') Time
+                    th(scope='col') Contact Number
+                    th(scope='col') Branch Name
+                    th action 
+                    th 
+                
+            tbody
+            each produce in produces  
+                tr
+                    td #{produce._id}
+                    td #{produce.productName}
+                    td #{produce.produceType}
+                    td #{produce.nameOfDealer}
+                    td #{produce.sellingPrice}
+                    td #{produce.costOfProduce}
+                    td #{produce.tonnage}
+                    td #{produce.Date}
+                    td #{produce.Time}
+                    td #{produce.contactNumber}
+                    td #{produce.branchName}
+                    td                     
+                        form(method="POST",Action="/Produce-list")   
+                            input(type="hidden",name="_id",value=produce._id)
+                            button(type="submit") DELETE 
+                    td 
+                        a(href="/editProduce" + produces._id) edit   
+    else 
+        p There are no registered produces 
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js')                    

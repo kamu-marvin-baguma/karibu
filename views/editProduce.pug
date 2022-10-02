@@ -1,0 +1,99 @@
+doctype html
+html(lang='en')
+  head
+    title Employee Lists
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css', rel='stylesheet')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js')
+    link(rel='stylesheet', href='../employees/employees.css')
+  body
+    nav.navbar.navbar-light.bg-light
+      .container-fluid
+        a.navbar-brand Karibu Groceries Ltd
+        a.links(href='') Home
+        a.links(href='') Dashboard
+        form.d-flex
+          input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+          button.btn(type='submit') Search
+    // <div class="container">
+    h2.list Produce Lists
+    h5="list"
+      | Branch:
+      table.table.table-dark.table-striped
+        thead.thead
+          tr
+            th #
+            th Product Name
+            th Produce Type
+            th Name Of Dealer
+            th Selling Price Of Produce
+            th Cost of Produce(per kg)
+            th Tonnage(1000kgs)
+            th Date
+            th Time
+            th Contact Number
+            th Branch Name
+        tbody
+          tr
+            td 1
+            td G-nuts
+            td legumes
+            td kk ltd
+            td 2000
+            td 3000
+            td 20
+            td 22/09/2022
+            td 10:30Pm
+            td 0778232395
+            td Kisasi
+          tr
+            td 2
+            td G-nuts
+            td legumes
+            td kk ltd
+            td 2000
+            td 3000
+            td 20
+            td 22/09/2022
+            td 10:30Pm
+            td 0778232395
+            td Kisasi
+          tr
+            td 3
+            td G-nuts
+            td legumes
+            td kk ltd
+            td 2000
+            td 3000
+            td 20
+            td 22/09/2022
+            td 10:30Pm
+            td 0778232395
+            td Kisasi
+          tr
+            td 4
+            td G-nuts
+            td legumes
+            td kk ltd
+            td 2000
+            td 3000
+            td 20
+            td 22/09/2022
+            td 10:30Pm
+            td 0778232395
+            td Kisasi
+          tr
+            td 5
+            td G-nuts
+            td legumes
+            td kk ltd
+            td 2000
+            td 3000
+            td 20
+            td 22/09/2022
+            td 10:30Pm
+            td 0778232395
+            td Kisasi
+      button.btn(type='submit') Save
+      button.btn(type='submit') logout

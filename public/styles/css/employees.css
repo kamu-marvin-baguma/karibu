@@ -1,0 +1,31 @@
+.links{
+    color: black;
+    text-decoration: none;
+}
+.links:hover{
+    color: orange;
+}
+.navbar-brand{
+    margin-left: 10px;
+}
+body{
+    background: rgb(255,136,0);
+    background: linear-gradient(90deg, rgba(255,136,0,0.7736149635635504)
+     3%, rgba(32,121,9,0.5075085209865196) 81%);
+}
+.btn{
+    background-color: orange;
+    margin-right: 10px;
+}
+.container{
+    margin: 60px;
+}
+.list{
+    color: red;
+}
+.table{
+    border-radius: 5px;
+}
+.thead{
+    color: orange;
+}

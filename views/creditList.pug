@@ -1,0 +1,50 @@
+extends ./layout 
+block content 
+    .container
+    h2.list creditsales List
+    h5="list"
+    | Branch:
+    a.btn.btn-warning(href="/logout") Log out
+
+    if creditsales .length
+        table.table.table-dark.table-striped
+            thead.thead
+                tr
+                    th(scope='col') Produce Name
+                    th(scope='col') Produce Type
+                    th(scope='col') Name of Dealer
+                    th(scope='col') Sales Agent 
+                    th(scope='col') Amount Due(Ugx)
+                    th(scope='col') Tonnage(kgs)
+                    th(scope='col') Date of Dispatch
+                    th(scope='col') Due Date
+                    th(scope='col') Location
+                    th(scope='col') Contact Number
+                    th(scope='col') National Id
+                    th action 
+                    th 
+            tbody
+            each creditsale in creditsales     
+                tr
+                    td #{creditsale.produceNamee}
+                    td #{creditsale.produceType}
+                    td #{creditsale.nameOfDealer}
+                    td #{creditsale.salesAgent}
+                    td #{creditsale.AmountDue}
+                    td #{creditsale.tonnage}
+                    td #{creditsale.dispatchDate}
+                    td #{creditsale.DueDate}
+                    td #{creditsale.location}
+                    td #{creditsale.contactNumber}
+                    td #{creditsale.nationalId}
+                    td 
+                        form(method="POST",Action="/credit-list")
+                            input(type="hidden",name="_id",value=creditsale._id)
+                            button(type="submit") DELETE
+                    td 
+                        a(href="/editcredit" + creditsales  ._id) edit 
+    else                                
+        p There are no registered credits
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js')
+
+    

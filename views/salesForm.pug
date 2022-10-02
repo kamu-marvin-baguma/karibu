@@ -1,0 +1,55 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Document
+  body
+    // nav
+    nav.navbar.navbar-light.bg-light
+      .container-fluid
+        a.navbar-brand Karibu Groceries Ltd
+        a.links(href='') Home
+        a.links(href='') Dashboard
+        form.d-flex
+          input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
+          button.btn(type='submit') Search
+    // nav
+    h3 new  Sales
+    form.row.g-3(method="POST" action="/sales/newSale" name="salesform")
+      .col-md-6
+        label.form-label(for='produceName') Produce Name
+        select#inputState.form-select(name = "produceName" style="padding:10px" required)
+          option(selected='')
+          option Beans
+          option Maize Grain
+          option G-nuts
+          option cowpeas
+          option Millet
+      .col-md-6
+        label.form-label(for='nameOfDealer') Name Of Buyer
+        select#inputState.form-select(name="nameOfDealer")
+          option(selected='') Choose...
+          option Other Companies
+          option Individuals
+          option Own Farms
+      .col-md-6
+        label.form-label(for='salesAgent') Sales Agent
+        select#inputState.form-select(name="salesAgent")
+          option(selected='') Choose...
+          option Adam M
+      .col-md-6
+        label.form-label(for='tonnage') Produce in tonnage(1000kgs)
+        input#inputCity.form-control(type='text' name="tonnage" min="1000")
+      .col-md-6
+        label.form-label(for='Date') Date
+        input#start.form-control(type='date' name='date' )
+      .col-md-6
+        label.form-label(for='Time') Time
+        input#appt.form-control(type='time' name='time')
+      .col-md-12
+        label.form-label(for='AmountPaid') Amount Paid(Ugx)
+        input#inputCity.form-control(type='number' name="AmountPaid" )
+      .col-12
+        button.btn-submit(type='submit') submit

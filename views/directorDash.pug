@@ -1,0 +1,80 @@
+doctype html
+html(dir='ltr', lang='en')
+  head
+    meta(charset='UTF-8')
+    // <title> Responsiive Admin Dashboard | CodingLab </title>
+    link(rel='stylesheet', href='directorDash.css')
+    // Boxicons CDN Link
+    link(href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css', rel='stylesheet')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  body
+    .sidebar
+      .logo-details
+        img(src='../images/basket-159430_960_720.png')
+        span.logo_name K.GROCERIES LTD
+      ul.nav-links
+        li
+          a.active(href='#')
+            i.bx.bx-grid-alt
+            span.links_name Dashboard
+        li
+          a(href='#')
+            i.bx.bx-box
+            span.links_name Total Sales
+        li
+          a(href='#')
+            i.bx.bx-message
+            span.links_name Total Purchases
+        li.log_out
+          a(href='#')
+            i.bx.bx-log-out
+            span.links_name Log out
+    section.home-section
+      nav
+        .sidebar-button
+          i.bx.bx-menu.sidebarBtn
+          span.dashboard Dashboard
+        .search-box
+          input(type='text', placeholder='Search...')
+          i.bx.bx-search
+        .profile-details
+          img(src='../images/Nsereko.jpg', alt='')
+          span.admin_name Nsereko
+      .home-content
+        .overview-boxes
+          .box
+            .right-side
+              .box-topic Total Sales
+              .number 40,876
+              h5 Branch:
+              .indicator
+                i.bx.bx-up-arrow-alt
+                span.text Month of Sept
+            i.bx.bx-cart-alt.cart
+          .box
+            .right-side
+              .box-topic Total Sales
+              .number 38,876
+              h5 Branch:
+              .indicator
+                i.bx.bx-up-arrow-alt
+                span.text Month of Sept
+            i.bx.bxs-cart-add.cart.two
+          .box
+            .right-side
+              .box-topic Total Purchases
+              .number ugx12,876
+              h5 Branch:
+              .indicator
+                i.bx.bx-up-arrow-alt
+                span.text Month of Sept
+            i.bx.bx-cart.cart.three
+    script.
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+      sidebar.classList.toggle("active");
+      if (sidebar.classList.contains("active")) {
+      sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+      } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+      };

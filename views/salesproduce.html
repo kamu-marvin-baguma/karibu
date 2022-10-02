@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="salesproduce.css">
+</head>
+<body>
+  <!-- nav -->
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      
+      <a  class="navbar-brand">Karibu Groceries Ltd</a>
+      <a href="" class="links">Home</a>
+      <a href="" class="links">Dashboard</a>
+      <form class="d-flex">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <!-- nav -->
+  <h3>Produce Sales</h3>
+  <form class="row g-3">
+    <div class="col-md-6">
+      <label for="inputState" class="form-label">Produce Name</label>
+      <select id="inputState" class="form-select">
+        <option selected></option>
+        <option>Beans</option>
+        <option>Maize Grain</option>
+        <option>G-nuts</option>
+        <option>cowpeas</option>
+        <option>Millet</option>
+      </select>
+    </div>
+   
+    <div class="col-md-6">
+      <label for="inputState" class="form-label">Name Of Buyer</label>
+      <select id="inputState" class="form-select">
+        <option selected>Choose...</option>
+        <option>Other Companies</option>
+        <option>Individuals</option>
+        <option>Own Farms</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="inputState" class="form-label">Sales Agent</label>
+      <select id="inputState" class="form-select">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">Produce in tonnage(1000kgs)</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="col-md-6">
+      <label for="start" class="form-label">Date</label>
+      <input type="date" class="form-control" name="strip-start" value="date" id="start">
+    </div>
+    <div class="col-md-6">
+        <label for="appt" class="form-label">Time</label>
+        <input type="time"  name="appt" class="form-control" id="appt">
+      </div>
+      <div class="col-md-12">
+        <label for="inputCity" class="form-label">Amount Paid(Ugx)</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+
+
+    <div class="col-12">
+      <button type="submit" class="btn-submit">submit</button>
+    </div>
+  </form>
+</body>
+</html>

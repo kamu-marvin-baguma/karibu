@@ -1,0 +1,53 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Document
+    link(rel='stylesheet' href='./css/bootstrap.css')
+    link(rel='stylesheet' href='salesproduce.css')
+  body
+    // nav
+    nav.navbar.navbar-light.bg-light
+      .container-fluid
+        a.navbar-brand Karibu Groceries Ltd
+        a.links(href='') Home
+        a.links(href='') Dashboard
+        form.d-flex
+          input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
+          button.btn(type='submit') Search
+    // nav
+    h3 Produce Sales
+    form.row.g-3(method='POST' action='newProduce' name='produceform')
+      .col-md-6
+        label.form-label(for='produceName') Produce Name
+        select#inputState.form-select
+          option(selected='' name='produceName')
+          option Beans
+          option Maize Grain
+          option G-nuts
+          option cowpeas
+          option Millet
+      .col-md-6
+        label.form-label(for='nameOfDealer') Name Of Dealer
+        input#nameOfDealer.form-control(type='nameOfDealer')
+      .col-md-6
+        label.form-label(for='inputState') Sales Agent
+        select#inputState.form-select
+          option(selected='') Choose...
+          option Adam M
+      .col-md-6
+        label.form-label(for='inputCity') Produce in tonnage(1000kgs)
+        input#inputCity.form-control(type='text')
+      .col-md-6
+        label.form-label(for='start') Date
+        input#start.form-control(type='date' name='strip-start' value='date')
+      .col-md-6
+        label.form-label(for='appt') Time
+        input#appt.form-control(type='time' name='appt')
+      .col-md-12
+        label.form-label(for='inputCity') Amount Paid(Ugx)
+        input#inputCity.form-control(type='text')
+      .col-12
+        button.btn-submit(type='submit') submit

@@ -1,0 +1,56 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Document
+    link(rel='stylesheet', href='/css/bootstrap.css')
+    link(rel="stylesheet", href="/css/salesproduce.css")
+    
+  body
+    h3 New Credit
+    form.row.g-3(method="POST" action="/newCredit" name="creditform")
+      .col-md-6
+        label.form-label(for='inputState') Produce Name
+        select#inputState.form-select(name="produceName")
+          option(selected='')
+          option Beans
+          option Maize Grain
+          option G-nuts
+          option cowpeas
+          option Millet
+      .col-md-6
+        label.form-label(for='produceType') Produce Type
+        input#inputPassword4.form-control(type='produceType' name="produceType")
+      .col-md-6
+        label.form-label(for='nameOfDealer') Name of Dealer 
+        input#inputPassword4.form-control(type='nameOfDealer ' name="nameOfDealer")
+      .col-md-6
+        label.form-label(for='salesAgent') Sales Agent
+        select#inputState.form-select(name="salesAgent")
+          option(selected='') Choose...
+          option Adam M 
+      .col-md-6
+        label.form-label(for='inputCity') Amount Due (Ugx)
+        input#inputCity.form-control(type='number')
+      .col-md-6
+        label.form-label(for='tonnage') Produce in tonnage
+        input#inputCity.form-control(type='number' name="tonnage")
+      .col-md-4
+        label.form-label(for='dispatchDate') Dispatch Date
+        input#start.form-control(type='date', name='dispatchDate', value='date')
+      .col-md-4
+        label.form-label(for='dueDate') Due Date
+        input#start.form-control(type='date', name='dueDate')
+      .col-md-4
+        label.form-label(for='location') Location 
+        input#Address.form-control(type='text', name='location')
+      .col-md-6
+        label.form-label(for='contactNumber') Contact Number 
+        input#inputCity.form-control(type='number' name="contactNumber")
+      .col-md-6
+        label.form-label(for='nationalId') National Id
+        input#inputZip.form-control(type='text' name="nationalId")
+      .col-12
+        button.btn-submit(type='submit') submit

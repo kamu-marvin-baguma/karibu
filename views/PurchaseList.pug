@@ -1,0 +1,46 @@
+extends ./layout
+block content
+  .container
+  h2.list Purchases List
+  h5="list"
+    Branch:
+  a.btn.btn-warning(href="/logout") Log out 
+
+  if purchases.length 
+    table.table.table-dark.table-striped
+      thead.thead
+        tr
+          th(scope='col') #
+          th(scope='col') Produce Name
+          th(scope='col') Produce Type
+          th(scope='col') Name of Buyer
+          th(scope='col') Purchased On
+          th(scope='col') Tonnage(kgs)
+          th(scope='col') Unit price
+            th(scope='col') Cost Price
+          th(scope='col') Branch
+          th(scope='col') Contact Number
+          th(scope='col') Selling Price
+      tbody
+      each purchases in purchases 
+        tr
+          td #{purchases._id}
+          td #{purchases.name}
+          td #{purchases.typeOfProduce}
+          td #{purchases.nameOfBuyer}
+          td #{purchases.PurchasedOn}
+          td #{purchases.tonnage}
+          td #{purchases.price}
+          td #{purchases.Costprice}
+          td #{purchases.dealer}
+          td #{purchases.contact}
+          td #{purchases.Selling}
+          td 
+                form(method="POST",Action="/purchase/purchase-list")
+                    input(type="hidden",name="_id",value=item._id)
+                    button(type="submit") DELETE 
+          td 
+                a(href="/editPurchase" + purchase._id) Edit
+  else 
+    p There are no registered purchases 
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js')

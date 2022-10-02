@@ -1,0 +1,34 @@
+extends ../layout
+block content 
+  .container
+    .row 
+      .col-md-12 
+        h2(style="color:orange") create sales 
+        form(name="createSales" method="POST" Action="/sales-list")
+          .col-md-6 
+            label.form-label(for='produce') Produce Name
+            input#produce.form-control(type='number'name="produceName")
+          .col-md-6
+            label.form-label(for='branch') Branch
+            input#branch.form-control(type='text'name="nameOfDealer")
+          .col-md-6
+            label.form-label(for='agent') Sales Agent 
+            input#agent.form-control(type='text'name="salesAgent")
+            .col-md-6
+            label.form-label(for='paid') Amount Paid 
+            input#paid.form-control(type='number'name=" AmountPaid")
+              .col-md-6
+            label.form-label(for='tonnage') Tonnage 
+            input#tonnage.form-control(type='number'name=" tonnage")
+             
+          .col-md-6
+            label.form-label(for='start') Date
+            input#start.form-control(type='date', name='Date', value='date')
+          .col-md-6
+            label.form-label(for='appt') Time
+            input#appt.form-control(type='time', name='time')
+          .col-md-12
+            label.form-label(for='dealer') Name of Dealer
+            input#dealer.form-control(type='text' name="nameOfDealer")
+          .col-12
+            button.btn-submit(type='submit') submit

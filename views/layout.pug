@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+    head
+      meta(charset="UTF-8")
+      meta(name="viewport" content="width=device-width, initial-scale=1.0")
+      meta(http-equiv="X-UA-Compatible" content="IE=edge")
+      link(href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css', rel='stylesheet')
+      link(href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' rel='stylesheet')
+      link(rel="stylesheet" href="/styles/land.css")
+      link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css', rel='stylesheet')
+      link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css' rel='stylesheet')
+
+      title= `${title}`
+    body 
+      .container
+        include includes/nav
+        main.content 
+        block content 
+script(src="./js/bootstrap.min.js")
+script(src='./index.js')
+script(src='login.js')
+script(async='' src='https://www.googletagmanager.com/gtag/js?id=G-Q3E3XZ7RL7')
+script(src='./register.js')
+script(src='https://unpkg.com/swiper@8/swiper-bundle.min.js')
+script.
+  var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  });
+script.
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+      sidebar.classList.toggle("active");
+      if (sidebar.classList.contains("active")) {
+      sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+      } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+      };

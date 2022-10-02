@@ -1,0 +1,40 @@
+extends layout
+block content 
+
+  .container 
+    .row 
+      .col-md-12 
+        h2(style="orange") create purchase 
+        form(name="purchaseForm" method="POST" Action="purchase/newPurchase")
+          .col-md-6
+            label.form-label(for='name') Produce Name
+            input#name.form-control(type='name')
+          .col-md-6
+            label.form-label(for='typeOfProduce') Produce Type
+            input#typeOfProduce.form-control(type='typeOfProduce')
+          .col-6
+            label.form-label(for='nameOfBuyer') Name of Buyer
+            input#nameOfBuyer.form-control(type='text')
+          .col-md-6
+            label.form-label(for='PurchasedOn') Purchased On
+            input.form-control(type='text', id='PurchasedOn')
+          .col-md-6
+            label.form-label(for='Tonnage') Tonnage(kgs)
+            input#Tonnage.form-control(type='number')
+          .col-md-6
+            label.form-label(for='price') Unit price
+            input#price.form-control(type='number')
+          .col-md-6
+            label.form-label(for='Costprice') Cost Price
+            input#Costprice.form-control(type='number', name='Costprice')
+          .col-6
+            label.form-label(for='Dealer') Dealer&apos;s Name
+            input#Dealer.form-control(type='text')
+          .col-6
+            label.form-label(for='contact') Contact Number
+            input#contact.form-control(type='number')
+          .col-6
+            label.form-label(for='Selling') Selling Price
+            input#Selling.form-control(type='number', name='Selling')
+          .col-12
+            button.btn.btn-primary(type='submit') submit
